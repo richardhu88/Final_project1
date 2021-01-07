@@ -6,14 +6,23 @@
 //
 
 import UIKit
+//import GoogleMaps
+import Firebase
+import CoreLocation
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    let lm = CLLocationManager()
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        GMSServices.provideAPIKey("AIzaSyDUluJOxSMl776tsKvDblZAUYmKeMgr1es")
+        lm.requestWhenInUseAuthorization()
+        FirebaseApp.configure()
         return true
     }
 
